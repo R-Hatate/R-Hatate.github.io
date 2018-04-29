@@ -8,7 +8,11 @@ published: true
 
 ## 关于我
 
-一个来自sjzez的OIer，今年高一，一个信息学竞赛初学者
+来自sjzez的OIer
+
+今年高一
+
+信息学竞赛初学者
 
 [这里](https://github.com/KingSann/code)有我的刷题记录
 
