@@ -1,27 +1,30 @@
-# Site settings
-title:          mgc ht
-description:    "just a oier's blog"
-baseurl:        "/"
-url:            "https://www.magichut.pw"
+# Welcome to Amplified for Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Author
-author:
-  name:         KingSann
-  url:          https://www.magichut.pw
-  email:        me@magichut.pw
+# Site settings
+
+title: magia kabano  # 博客标题
+email: ikiHE@qq.com  # 你的邮箱
+description: la blogo de iferkey
+logo: "/assets/images/logo.jpg"    #自定义 logo
+# baseurl: "/" # 重要：如果你绑定了自定义域名或使用了自己的用户名作为项目名，请删除本行并修改下一行
+url: "https://code.magichut.pw" # 如果你绑定了自定义域名或使用了自己的用户名作为项目名，请修改本行为你的域名
+paginate: 5 # 每页显示文章数量
+name: 'iferkey'   # 你的昵称
+bio: Ĝi estas en Informaj Olimpikoj
+author_image: "/assets/images/author.jpg"  #个人头像
+twitter_username: iferkey
+github_username: KingSann
 
 # Build settings
-markdown:       kramdown
+markdown: kramdown
 
-# Assets
-sass:
-  sass_dir:     _sass
-  style:        compressed
+kramdown:
+  parse_block_html: true
 
-# Gems
-plugins:
+gems:
   - jekyll-paginate
-
-# Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5

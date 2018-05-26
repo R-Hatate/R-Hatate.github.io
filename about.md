@@ -1,27 +1,32 @@
 ---
-layout: post
+layout: page
 title: About
-author: KingSann
 permalink: /about/
-published: true
 ---
 
-## 关于我
+<amp-img width="600" height="300" layout="responsive" src="//lorempixel.com/600/300/sports"></amp-img>
 
-来自sjzez的OIer
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac augue libero.
+Fusce ac tempor dolor. Ut est dui, gravida a consequat aliquet, fermentum
+sodales risus. Suspendisse eu arcu id mi ornare facilisis non id nisl. Maecenas
+nec congue arcu, non semper neque. Proin mollis nisl diam, eu ultrices diam
+facilisis et. Integer fringilla lorem quis semper venenatis.
 
-今年高一
+Aliquam vestibulum purus enim. Sed rhoncus interdum erat id consequat. Nulla
+cursus venenatis massa, quis convallis lacus condimentum vel. Etiam mollis,
+orci ac pharetra commodo, diam lectus hendrerit eros, ac elementum magna augue
+sed tellus. Maecenas molestie, nisi ut sodales scelerisque, purus neque
+imperdiet dui, mollis elementum sem augue vel ipsum. Nulla lacinia arcu at quam
+lobortis, vitae interdum tellus fermentum. Cum sociis natoque penatibus et
+magnis dis parturient montes, nascetur ridiculus mus. Fusce sodales semper erat,
+eu fringilla ligula vulputate id. Maecenas quis libero pellentesque lacus
+egestas vehicula sit amet et neque. Nulla nec facilisis sem. Pellentesque rutrum
+elementum molestie. Quisque eget dui ac quam placerat dictum. Suspendisse quis
+ante placerat, efficitur enim ut, commodo tortor. Etiam consequat, eros quis
+consequat congue, augue mauris molestie libero, sed iaculis lectus enim eu magna.
 
-信息学竞赛初学者
-
-[这里](https://github.com/KingSann/code)有我的刷题记录
-
-博客随机更新 ~~重构~~ ，由于不太喜欢写题解所以可能教程 ~~科技~~ 向的文章较多
-
-## 友链
-
-[Aaron's Blog](http://aoaoao.me/)
-
-[dloj](http://dloj.magichut.pw:8081/)
-
-[eoj](http://oj.magichut.pw/)
+Etiam sapien dolor, mattis vel feugiat nec, egestas eget risus. Lorem ipsum
+dolor sit amet, consectetur adipiscing elit. Aenean aliquam massa a est porta
+ vehicula. Cras eu gravida massa. Integer non sem ac mi ultrices posuere a
+ pretium tortor. Mauris vitae varius sem. Praesent faucibus nec felis et dictum.
+ Vestibulum lorem velit, laoreet nec vestibulum in, varius nec enim.
