@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Lora:400,700' rel='stylesheet' type='text/css'>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>datumoj strukturo diversaj demandoj I</title>
+  <meta name="description" content="Part I 数据结构学傻系列">
+
+  <link rel="canonical" href="http://localhost:4000/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/2018/05/05/datumoj-strukturo-diversaj-demandoj-I.html">
+  <link rel="alternate" type="application/rss+xml" title="magia kabano" href="http://localhost:4000/feed.xml">
+
+  <script type="application/ld+json">
+  
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": "http://localhost:4000/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/2018/05/05/datumoj-strukturo-diversaj-demandoj-I.html",
+  "headline": "datumoj strukturo diversaj demandoj I",
+  "datePublished": "2018-05-05T00:00:00+08:00",
+  "dateModified": "2018-05-05T00:00:00+08:00",
+  "description": "Part I 数据结构学傻系列",
+  "author": {
+    "@type": "Person",
+    "name": "iferkey"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "magia kabano",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:4000/assets/images/logo.jpg",
+      "width": "60",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://localhost:4000/assets/images/logo.jpg",
+    "height": "60",
+    "width": "60"
+  }
+}
+
+  </script>
+
+  <style amp-custom>
+  
+  /**
+ * Syntax highlighting styles
+ */
+.highlight {
+  background: #fff; }
+  .highlighter-rouge .highlight {
+    background: #eef; }
+  .highlight .c {
+    color: #998;
+    font-style: italic; }
+  .highlight .err {
+    color: #a61717;
+    background-color: #e3d2d2; }
+  .highlight .k {
+    font-weight: bold; }
+  .highlight .o {
+    font-weight: bold; }
+  .highlight .cm {
+    color: #998;
+    font-style: italic; }
+  .highlight .cp {
+    color: #999;
+    font-weight: bold; }
+  .highlight .c1 {
+    color: #998;
+    font-style: italic; }
+  .highlight .cs {
+    color: #999;
+    font-weight: bold;
+    font-style: italic; }
+  .highlight .gd {
+    color: #000;
+    background-color: #fdd; }
+  .highlight .gd .x {
+    color: #000;
+    background-color: #faa; }
+  .highlight .ge {
+    font-style: italic; }
+  .highlight .gr {
+    color: #a00; }
+  .highlight .gh {
+    color: #999; }
+  .highlight .gi {
+    color: #000;
+    background-color: #dfd; }
+  .highlight .gi .x {
+    color: #000;
+    background-color: #afa; }
+  .highlight .go {
+    color: #888; }
+  .highlight .gp {
+    color: #555; }
+  .highlight .gs {
+    font-weight: bold; }
+  .highlight .gu {
+    color: #aaa; }
+  .highlight .gt {
+    color: #a00; }
+  .highlight .kc {
+    font-weight: bold; }
+  .highlight .kd {
+    font-weight: bold; }
+  .highlight .kp {
+    font-weight: bold; }
+  .highlight .kr {
+    font-weight: bold; }
+  .highlight .kt {
+    color: #458;
+    font-weight: bold; }
+  .highlight .m {
+    color: #099; }
+  .highlight .s {
+    color: #d14; }
+  .highlight .na {
+    color: #008080; }
+  .highlight .nb {
+    color: #0086B3; }
+  .highlight .nc {
+    color: #458;
+    font-weight: bold; }
+  .highlight .no {
+    color: #008080; }
+  .highlight .ni {
+    color: #800080; }
+  .highlight .ne {
+    color: #900;
+    font-weight: bold; }
+  .highlight .nf {
+    color: #900;
+    font-weight: bold; }
+  .highlight .nn {
+    color: #555; }
+  .highlight .nt {
+    color: #000080; }
+  .highlight .nv {
+    color: #008080; }
+  .highlight .ow {
+    font-weight: bold; }
+  .highlight .w {
+    color: #bbb; }
+  .highlight .mf {
+    color: #099; }
+  .highlight .mh {
+    color: #099; }
+  .highlight .mi {
+    color: #099; }
+  .highlight .mo {
+    color: #099; }
+  .highlight .sb {
+    color: #d14; }
+  .highlight .sc {
+    color: #d14; }
+  .highlight .sd {
+    color: #d14; }
+  .highlight .s2 {
+    color: #d14; }
+  .highlight .se {
+    color: #d14; }
+  .highlight .sh {
+    color: #d14; }
+  .highlight .si {
+    color: #d14; }
+  .highlight .sx {
+    color: #d14; }
+  .highlight .sr {
+    color: #009926; }
+  .highlight .s1 {
+    color: #d14; }
+  .highlight .ss {
+    color: #990073; }
+  .highlight .bp {
+    color: #999; }
+  .highlight .vc {
+    color: #008080; }
+  .highlight .vg {
+    color: #008080; }
+  .highlight .vi {
+    color: #008080; }
+  .highlight .il {
+    color: #099; }
+
+.icon > svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle; }
+  .icon > svg path {
+    fill: #828282; }
+
+amp-img {
+  background-color: grey; }
+
+.cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+main {
+  display: block; }
+
+body {
+  background-color: #fff;
+  font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig"; }
+
+.site-header {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 16px auto 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 800px) {
+    .site-header {
+      padding: 0 16px; } }
+  .site-header .page-links {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 30px; }
+    .site-header .page-links a {
+      text-decoration: none;
+      color: #999999; }
+      .site-header .page-links a:hover {
+        color: #333333; }
+
+.blog-header {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .blog-header .blog-title {
+    margin-bottom: 8px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    outline: 0;
+    line-height: 50px;
+    word-break: break-word;
+    color: #333333; }
+  .blog-header .blog-description {
+    font-size: 28px;
+    margin: 0 0 20px;
+    padding: 0;
+    line-height: 1.2;
+    color: #666666;
+    font-weight: 300; }
+
+.content {
+  width: 100%;
+  max-width: 700px;
+  margin: 25px auto 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 800px) {
+    .content {
+      padding: 0 16px; } }
+  .content article {
+    padding: 20px 0;
+    border-bottom: 1px solid #f2f2f0; }
+    .content article:last-child {
+      border-bottom: 0px; }
+    .content article .post-title {
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      font-style: normal;
+      display: block;
+      font-size: 36px;
+      line-height: 1.15;
+      margin: 0 0; }
+      .content article .post-title a {
+        text-decoration: none;
+        color: #333332; }
+        .content article .post-title a:hover {
+          text-decoration: none; }
+    .content article .post-excerpt {
+      letter-spacing: -0.02em;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1.59;
+      color: #666665; }
+    .content article .post-meta {
+      font-size: 14px;
+      color: #b3b3b1;
+      line-height: 30px; }
+      .content article .post-meta a {
+        color: #b3b3b1;
+        text-decoration: none; }
+        .content article .post-meta a:hover {
+          text-decoration: underline; }
+
+.post-template .content {
+  max-width: 700px; }
+
+.index-headline {
+  border-top: 1px solid #dededc;
+  margin: 0;
+  padding: 16px 0; }
+  .index-headline span {
+    color: #b3b3b1;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+.pagination {
+  text-align: center;
+  padding: 16px 0 0;
+  font-size: 12px; }
+  .pagination a {
+    color: #999999;
+    text-decoration: none; }
+    .pagination a:hover {
+      color: #333333; }
+
+.site-footer {
+  margin: 0 auto;
+  padding: 48px 0;
+  width: 100%;
+  max-width: 700px;
+  font-size: 12px;
+  text-align: center;
+  color: #999999;
+  line-height: 17.6px; }
+  .site-footer a {
+    color: #666666;
+    text-decoration: none; }
+    .site-footer a:hover {
+      color: #333333; }
+
+.post .post-meta {
+  font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif; }
+.post .post-title {
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.04em;
+  font-size: 50px;
+  line-height: 1.1;
+  color: #333332;
+  margin-bottom: 50px; }
+.post .author-image {
+  background-image: url(/assets/images/author.jpg);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 8px;
+  margin-bottom: -10px;
+  float: left;
+  background-size: cover;
+  border-radius: 100%;
+  text-indent: -9999px; }
+.post .post-meta-text {
+  color: #b3b3b1;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  overflow: hidden;
+  font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+.post .post-content {
+  width: 100%;
+  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  color: #333333; }
+  .post .post-content h1, .post .post-content h2, .post .post-content h3 {
+    font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif; }
+  .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1.3;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif; }
+  .post .post-content h3 {
+    font-size: 36px; }
+  .post .post-content h2, .post .post-content h1 {
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-top: 50px;
+    margin-bottom: 0px; }
+  .post .post-content table {
+    border-collapse: collapse; }
+  .post .post-content table, .post .post-content th, .post .post-content td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left; }
+  .post .post-content p {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 1.59;
+    letter-spacing: -.002em;
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: #333333;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto; }
+  .post .post-content a {
+    color: #333333;
+    text-decoration: underline; }
+  .post .post-content amp-img, .post .post-content amp-youtube {
+    margin-top: 30px; }
+  .post .post-content figure {
+    margin: 0;
+    padding: 0 0 30px; }
+  .post .post-content figcaption {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #666665;
+    outline: 0;
+    z-index: 300;
+    text-align: center; }
+  .post .post-content hr {
+    border: 0;
+    padding: 0;
+    display: block;
+    width: 15%;
+    margin: 30px auto;
+    border: 0px solid #dddddd;
+    border-top: 1px solid #dddddd; }
+  .post .post-content blockquote {
+    margin: 0 0 30px;
+    margin-left: -26px;
+    border-left: 3px solid #57ad68;
+    padding-left: 20px; }
+    .post .post-content blockquote p {
+      letter-spacing: 0.01rem;
+      font-weight: 400;
+      mborder-left: 3px solid #57ad68;
+      mpadding-left: 20px;
+      mmargin-left: -26px;
+      padding-bottom: 3px; }
+  .post .post-content ul, .post .post-content ol {
+    padding: 0 0 30px;
+    margin: 0; }
+  .post .post-content li {
+    padding: 0;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    line-height: 30px;
+    margin-left: 30px;
+    margin-bottom: 12px;
+    padding-top: 2px; }
+    .post .post-content li p {
+      padding: 0 0 1.618rem; }
+  .post .post-content ol li {
+    list-style-type: decimal; }
+.post .bottom-teaser {
+  padding: 50px 0 0 0;
+  font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif; }
+  .post .bottom-teaser hr {
+    border: 0;
+    padding: 0;
+    display: block;
+    width: 15%;
+    margin: 16px 0 16px 100px;
+    border: 0px solid #dddddd;
+    border-top: 1px solid #dddddd; }
+  .post .bottom-teaser .isLeft {
+    float: left;
+    width: 47%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media only screen and (max-width: 800px) {
+      .post .bottom-teaser .isLeft {
+        width: 100%;
+        padding-bottom: 32px; } }
+    .post .bottom-teaser .isLeft .bio {
+      margin-top: 18px;
+      margin-bottom: 18px; }
+    .post .bottom-teaser .isLeft .username {
+      margin-left: 4px;
+      margin-right: 18px;
+      margin-bottom: 18px; }
+    .post .bottom-teaser .isLeft .index-headline {
+      padding-bottom: 32px; }
+    .post .bottom-teaser .isLeft a {
+      color: black;
+      text-decoration: none; }
+      .post .bottom-teaser .isLeft a:hover {
+        color: #333333;
+        text-decoration: underline; }
+    .post .bottom-teaser .isLeft .author-image {
+      display: block;
+      width: 80px;
+      height: 80px;
+      float: left;
+      background-size: cover;
+      border-radius: 100%;
+      text-indent: -9999px; }
+    .post .bottom-teaser .isLeft h4 {
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 700;
+      padding: 0;
+      margin: 0;
+      padding-left: 100px; }
+    .post .bottom-teaser .isLeft p {
+      font-size: 14px;
+      line-height: 1.3;
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+      padding-left: 100px; }
+      .post .bottom-teaser .isLeft p.published {
+        color: #999999; }
+  .post .bottom-teaser .isRight {
+    float: right;
+    width: 47%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media only screen and (max-width: 800px) {
+      .post .bottom-teaser .isRight {
+        width: 100%; } }
+    .post .bottom-teaser .isRight .index-headline {
+      padding-bottom: 32px; }
+    .post .bottom-teaser .isRight .site-footer {
+      margin: 0;
+      padding: 0;
+      color: #333333;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.3;
+      color: #999999; }
+      .post .bottom-teaser .isRight .site-footer a {
+        color: #333333;
+        text-decoration: none; }
+        .post .bottom-teaser .isRight .site-footer a:hover {
+          text-decoration: underline; }
+      .post .bottom-teaser .isRight .site-footer .poweredby {
+        display: block;
+        padding-bottom: 18px;
+        font-weight: 700;
+        color: #333333; }
+
+.share {
+  text-align: right;
+  padding: 20px 0 0; }
+  .share a {
+    text-decoration: none;
+    color: #bbbbbb;
+    padding-left: 12px; }
+    .share a .hidden {
+      display: none; }
+    .share a:hover {
+      color: #333333; }
+
+pre, code {
+  font-size: 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #eeeeff; }
+
+code {
+  padding: 1px 5px; }
+
+pre {
+  padding: 8px 12px;
+  overflow-x: scroll; }
+  pre > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0; }
+
+.pagination .disabled {
+  opacity: 0; }
+
+
+  </style>
+
+
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+</head>
+
+  <body>
+    <header class="site-header">
+  <a href="/" class="logo"><span class="logo"><amp-img src="/assets/images/logo.jpg" width="48" height="48" /></span></a>
+
+  <div class="page-links">
+    <a class="page-link" href="/">Home</a>
+    
+      
+      • <a class="page-link" href="/about/">About</a>
+      
+    
+      
+    
+      
+    
+      
+      • <a class="page-link" href="/links.html">Link</a>
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</header>
+
+
+    <main class="content" role="main">
+  <article class="post">
+    <div class="post-meta">
+      <h1 class="post-title">datumoj strukturo diversaj demandoj I</h1>
+    </div>
+
+    <section class="post-content">
+      <a name="topofpage"></a>
+      <h1 id="part-i-数据结构学傻系列">Part I 数据结构学傻系列</h1>
+
+<p>本章没有什么高深的数据结构，都只是一些基本操作，检验一下是否能灵活运用所学的知识</p>
+
+<p>本章所有例题除特殊说明均不要求强制在线，以及默认询问和序列大小同阶</p>
+
+<h2 id="i">I</h2>
+
+<blockquote>
+  <p>给定一个序列
+先进行$n$次区间加
+最后有$m$次询问区间和</p>
+</blockquote>
+
+<p>线段树？常数大得惊人</p>
+
+<p>树状数组？依然带一个log</p>
+
+<p>维护差分数组，每次$a_l \leftarrow a_l + c$，$a_{r+1} \leftarrow a_{r+1} - c$</p>
+
+<p>最后跑一遍前缀和然后输出$s_r - s_{l-1}$</p>
+
+<h2 id="ii">II</h2>
+
+<blockquote>
+  <p>给定一个序列（初始值是$\infty$）
+先进行$n$次区间取最小值（即$a_i \leftarrow \text{min}(a_i,x)$ ）
+问最后每个位置上的值</p>
+</blockquote>
+
+<h3 id="一个很朴素的想法">一个很朴素的想法</h3>
+
+<p>区间取最小值？<a href="http://jiry-2.blog.uoj.ac/blog/1404">Segment tree Beats!</a></p>
+
+<p>先想一想自己会写嘛</p>
+
+<p>时间复杂度$O(n \text{log}^2 n)$</p>
+
+<h3 id="稍作优化">稍作优化</h3>
+
+<p>发现允许离线，不如以权值为关键字，从大到小排序一遍</p>
+
+<p>这回就是一堆区间赋值操作了，因为当前赋值的区间肯定不比当前的权值小（因为排过序）</p>
+
+<p>时间复杂度$O(n \text{log} n)$</p>
+
+<h3 id="终极优化">终极优化</h3>
+
+<p>如果从小到大排序呢？</p>
+
+<p>那么赋值过的点全部缩起来就好咯，这个过程用并查集维护</p>
+
+<p>时间复杂度$O(n \alpha (n))$</p>
+
+<p>如果路径压缩和按秩合并不同时写的话，是$O(n \text{log} n)$</p>
+
+<h3 id="所以这道题有啥用">所以这道题有啥用</h3>
+
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1396">bzoj 1396</a></p>
+
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2865">bzoj 2865</a></p>
+
+<h2 id="iii">III</h2>
+
+<blockquote>
+  <p>给定一个序列，每次询问一段区间，如果这段区间里有$0$则输出TAK，否则输出NIE</p>
+</blockquote>
+
+<p>事实上，可以构造$b$数组，满足$b_i \leftarrow [a_i == 0]$，然后记录一下前缀和之后判断$s_r - s_{l-1}$是否大于$0$即可</p>
+
+<p>这个时间复杂度和空间复杂度是$O(n)$的</p>
+
+<h2 id="iv">IV</h2>
+
+<blockquote>
+  <p>给定一个序列
+每次询问某一段区间里小于等于某个值的个数</p>
+</blockquote>
+
+<p><del>可持久化权值线段树上二分查询区间和</del></p>
+
+<p>首先查询满足区间可减性，只需要将$1 \sim r$的答案减去$1 \sim l-1$的答案就行了</p>
+
+<p>显然可以利用离线的性质用简单的方法来做这道题</p>
+
+<p>将所有的查询离线，并按右端点递增排序</p>
+
+<p>这样只需要维护另一个东西了</p>
+
+<blockquote>
+  <p>维护一个集合，支持插入一个数，或者查询小于等于某个数的个数</p>
+</blockquote>
+
+<p>显然离散化权值之后树状数组维护一下</p>
+
+<h3 id="题外话">题外话</h3>
+
+<blockquote>
+  <p>维护一个集合，支持插入一个数，或者查询小于等于某个数的个数
+强制在线
+时间复杂度可以为$O(n \text{log}^2n)$</p>
+</blockquote>
+
+<p>用map代替数组</p>
+
+<h2 id="v">V</h2>
+
+<blockquote>
+  <p>有$n$件物品，编号为$0 \sim n-1$
+每件物品有一个不同于其它物品的价值，并且可以用一些小写英文字母构成的单词来描述这件物品
+有$m$次查询，每次查询包含一个整数$t$和一个字符串$s$
+如果描述一件物品的单词中，有以$s$为前缀的单词，那么这件物品与当前查询相关
+你需要计算每一次查询中，相关的物品一共有多少个
+并且相关的物品中价值前$t$大的物品的编号分别是什么
+也就是说都要输前$t$大的物品编号</p>
+</blockquote>
+
+<p>怎么做？</p>
+
+<p>hash？常数挺大的而且不太好写</p>
+
+<p>如果有一堆字符串的话或许先构造一棵trie比较好</p>
+
+<h3 id="一个没什么用的5分算法">一个没什么用的5分算法</h3>
+
+<p>对于trie树上的每一个点，用动态开点线段树记录一下它的子树中的所有叶子结点的$(\text{编号}, \text{权值})$组，然后线段树合并</p>
+
+<p>可惜这个算法是 $O(n \text{log} n)$ 的，而且还容易写错<del>代码长度感人</del></p>
+
+<h3 id="再读一读题">再读一读题</h3>
+
+<p>发现题意不是找第$t$大，而是输出前$t$大，那么可以用set/map启发式合并水过去</p>
+
+<h3 id="事实上这是一个普及组难度的题">事实上这是一个普及组难度的题</h3>
+
+<p>观察一下上面那个做法，发现本质上只是用数据结构模拟暴力</p>
+
+<p>不妨直接用暴力解决</p>
+
+<p>对于每一个点开一个vector，每插入一个字符串，在trie树上经过的点全部都扔进去一个$(\text{编号}, \text{权值})$</p>
+
+<p>所有的插入都做完之后，对于每一个点都直接sort一遍，记得要去重</p>
+
+<p>由于要输出前$t$大的所有物品的编号，那么直接在排序后的vector上扫一遍就可以了</p>
+
+<h2 id="vi">VI</h2>
+
+<blockquote>
+  <p>给定长度为$n$的实数序列$a_i(1 \le i \le n)$
+你需要在数列上进行两类操作：</p>
+
+  <ol>
+    <li>$\forall i \in [l,r],a_i \leftarrow a_i + c$</li>
+    <li>求$\sum\limits_{i=l}^{r}\text{cos}(a_i)$</li>
+  </ol>
+
+  <p>$n \le 10^5$</p>
+</blockquote>
+
+<p>泰勒展开？由于精度问题会爆零</p>
+
+<p>看起来就是线段树之类的题, 那么首先看一看能不能将标记合并到区间里</p>
+
+<p>假设当前处理的区间是$[l,r]$, 有一个集体加$c$的标记, 假设我们知道了答案$x=\sum\limits_{i=l}^{r}\cos(a_i)$, 现在我们要将所有的$a_i$变成$a_i+c$</p>
+
+<p>即</p>
+
+<script type="math/tex; mode=display">x'=\sum_{i=l}^{r}\cos(a_i+c)=\sum_{i=l}^{r}\cos(a_i) \cdot \cos(c) - \sin(a_i) \cdot \sin(c)</script>
+
+<p>分离一下之后</p>
+
+<script type="math/tex; mode=display">x'=\cos(c) \cdot (\sum_{i=l}^{r}\cos(a_i)) - \sin(c) \cdot (\sum_{i=l}^{r}\sin(a_i))</script>
+
+<p>那么可以发现只要再维护一下$\sum\limits_{i=l}^{r}\sin(a_i)$就好了</p>
+
+<p>设$y=\sum\limits_{i=l}^{r}\sin(a_i)$</p>
+
+<p>那么可以得到</p>
+
+<script type="math/tex; mode=display">y'=\sum_{i=l}^{r}\sin(a_i+c)=\sum_{i=l}^{r}\sin(a_i) \cdot \cos(c)+\cos(a_i) \cdot \sin(c)</script>
+
+<p>也就是说</p>
+
+<script type="math/tex; mode=display">y'=\cos(c) \cdot y + \sin(c) \cdot x</script>
+
+<p>整理一下就是</p>
+
+<script type="math/tex; mode=display">x'=\cos(c) \cdot x - \sin(c) \cdot y</script>
+
+<script type="math/tex; mode=display">y' = \cos(c) \cdot y + \sin(c) \cdot x</script>
+
+<p>之后线段树随便更新标记就行了</p>
+
+<h1 id="part-ii-正常向数据结构杂题选讲">Part II 正常向数据结构杂题选讲</h1>
+
+<p>本章没啥坑题，比较正常向，大概都是秒切题</p>
+
+<h2 id="i-1">I</h2>
+
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3211">bzoj 3211</a></p>
+
+<blockquote>
+  <p>给定一个序列，支持区间开方（下取整），区间求和</p>
+</blockquote>
+
+<p>一个数开方几次就成$0$或者$1$了，那么开方就暴力开方，并记录每个位置往右走第一个大于$1$的位置是哪，并用树状数组实现单点修改区间求和</p>
+
+<h2 id="ii-1">II</h2>
+
+<p><a href="https://www.luogu.org/problemnew/show/U14868">luogu U14868</a></p>
+
+<blockquote>
+  <p>给定一个序列，你需要找出一个连续子区间，使得它们的和加上它们的按位与最大
+即找一个$(l,r)$最大化
+<script type="math/tex">% <![CDATA[
+(\sum_{i=l}^{r}a_i)+(\text{&} _ {i=l}^{r}a _ i) %]]></script>
+序列中所有的数都为非负整数</p>
+</blockquote>
+
+<p><del>也许有神奇的线性算法，欢迎交流</del></p>
+
+<blockquote>
+  <p><strong>引理</strong>
+设数集为非负整数，且二进制位下最长数位长度为$k$
+若维护一个集合，每次加入一个值，这个集合的所有时刻的所有数的按位与的结果的种类数是$O(k)$级别的</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>证明</strong>
+每一位只会从$1$变成$0$或者保持$0$，即最多有$k$位会发生改变，而且改变之后就不会再变回去，所以种类数是$O(k)$级别的</p>
+</blockquote>
+
+<p>这道题呢？</p>
+
+<p>如果固定左端点后，对于所有相同的按位与的值，保留右端点最靠右的显然更优</p>
+
+<p>那么从右往左枚举一下左端点，对于当前左端点$l$，继承$l+1$的所有状态然后转移</p>
+
+<p>用array和sort和unique维护</p>
+
+<p>一道练习题：<a href="https://www.nowcoder.com/acm/contest/84/E">nowcoder 84 E</a></p>
+
+<h2 id="iii-1">III</h2>
+
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=5178">bzoj 5178</a></p>
+
+<blockquote>
+  <p>给定一个序列，你需要查询区间严格众数
+严格众数定义为，出现次数严格大于区间长度的一半
+即$\text{count}(x) \ge \lceil \frac{len+1}{2} \rceil$
+不存在的话输出$0$
+$n \le 10^5$</p>
+</blockquote>
+
+<p>区间众数？可能卡不过去</p>
+
+<p>出现次数相关的问题，一般来说满足区间可减性，不妨先构造主席树</p>
+
+<p>那么就是判断是否有一棵子树的大小大于等于$\lceil \frac{len+1}{2} \rceil$就行咯</p>
+
+<h2 id="iv-1">IV</h2>
+
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2724">bzoj 2724</a></p>
+
+<blockquote>
+  <p>给定一个序列，查询区间众数
+众数定义为出现次数最多的数
+如果有多个众数，输出最小的那个
+$n \le 10^5$</p>
+</blockquote>
+
+<p>将序列分成$\sqrt n$块</p>
+
+<p>暴力预处理$f_{i,j}$，表示第$i$块到第$j$块的众数</p>
+
+<p>再暴力预处理$cnt_{i,j}$，表示数字$i$在前$j$块中的出现次数，权值范围大的话就离散化一下</p>
+
+<p>然后就分块跑就行了，每次统计多出来的两个$\sqrt n$的块上的数的贡献</p>
+
+<p>时间复杂度$O( ( n + q ) \times \sqrt n)$</p>
+
+<h2 id="v-1">V</h2>
+
+<blockquote>
+  <p>统计子树严格众数
+严格众数定义为，出现次数严格大于区间长度的一半
+即$\text{count}(x) \ge \lceil \frac{len+1}{2} \rceil$
+不存在的话输出$0$
+$n \le 10^5$</p>
+</blockquote>
+
+<p>dfs序上就是区间严格众数</p>
+
+<h2 id="vi-1">VI</h2>
+
+<blockquote>
+  <p>统计子树众数
+众数定义为出现次数最多的数
+如果有多个众数，输出最小的那个
+$n \le 10^5$</p>
+</blockquote>
+
+<p>直接树上启发式合并</p>
+
+<h3 id="树上启发式合并">树上启发式合并</h3>
+
+<p>树上启发式合并可以解决静态树上的子树查询操作，诸如 输出$1~n$的子树中的某种查询。</p>
+
+<p>在某些情况下也可以冒名顶点分治，前提是你只能保留$u$到根这条路径的预处理。</p>
+
+<p>在树链剖分的时候，每一个点往上爬链，最多只会遇到$O(\text{log}n)$条链，通过这个结论，可以搞一些事情</p>
+
+<p>首先我们需要一个数据结构，支持三种操作</p>
+
+<ol>
+  <li>插入一个数据</li>
+  <li>清空该数据结构</li>
+  <li>查询某种答案</li>
+</ol>
+
+<p>定义$\text{sol}(u)$函数表示解决以$u$为根的子树的所有询问的查询信息</p>
+
+<p>那么访问到$u$的时候，把它所有的轻儿子依次访问</p>
+
+<p>假设现在访问到了$v$，那么先递归进行$\text{sol}(v)$</p>
+
+<p>然后清空数据结构（从始至终只有一个全局的数据结构）</p>
+
+<p>然后加入$u$这个点到数据结构</p>
+
+<p>然后将$u$的重儿子为根的子树的所有节点都插入到数据结构</p>
+
+<p>最后$u$的询问就是数据结构查询的答案了。</p>
+
+<p>由于每个节点只会被$O(\text{log}n)$次进行删除</p>
+
+<p>所以时间复杂度是$O(n \times \text{log}n \times \text{T}(\text{DS}))$</p>
+
+<h3 id="这道题呢">这道题呢？</h3>
+
+<p>只有插入的统计众数，开一个数组记录一下每个数出现次数，同时更新答案</p>
+
+<h2 id="vii">VII</h2>
+
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2333">bzoj 2333</a></p>
+
+<p><a href="https://www.luogu.org/recordnew/show/4099972">code</a></p>
+
+<blockquote>
+  <p>有$n$个节点，标号从$1$到$n$，这$n$个节点一开始相互不连通
+第$i$个节点的初始权值为$a_i$，接下来有如下一些操作
+<strong>U x y</strong> 加一条边，连接第$x$个节点和第$y$个节点
+<strong>A1 x v</strong> 将第$x$个节点的权值增加$v$
+<strong>A2 x v</strong> 将第$x$个节点所在的连通块的所有节点的权值都增加$v$
+<strong>A3 v</strong> 将所有节点的权值都增加$v$
+<strong>F1 x</strong> 输出第$x$个节点当前的权值
+<strong>F2 x</strong> 输出第$x$个节点所在的连通块中，权值最大的节点的权值
+<strong>F3</strong> 输出所有节点中，权值最大的节点的权值</p>
+</blockquote>
+
+<p>连边和连通性？并查集</p>
+
+<p>查询点？用vector存储每一个连通块的点</p>
+
+<p>连通块加？打标记</p>
+
+<p>如何合并？启发式合并，同时要更新标记</p>
+
+<p>整体加？开个变量记录一下</p>
+
+<p>局部和全局最大值？开个堆记录一下，需要支持可删除存在的元素，而且还需要支持可合并</p>
+
+<p>下面介绍一下启发式合并和可删堆</p>
+
+<h3 id="启发式合并">启发式合并</h3>
+
+<blockquote>
+  <p>给定一堆数据结构，每次诸如合并两个数据结构，或者在某个数据结构中查询一些信息
+数据结构的插入和查询复杂度很低，但重构的复杂度很高</p>
+</blockquote>
+
+<p>合并的时候，每次将大小（元素个数）小的数据结构中的元素一个一个插入到大的数据结构中，这样每次数据结构大小就会翻一倍，每个元素最多被访问$O(\text{log}n)$次</p>
+
+<p>打个比方，要是合并两个堆的话，小的那个堆一直pop，大的那个堆将pop出来的元素push进去</p>
+
+<h3 id="可删堆">可删堆</h3>
+
+<blockquote>
+  <p>实现一个数据结构
+支持插入一个数
+删除一个数据结构中存在的数
+查询最大值</p>
+</blockquote>
+
+<p>开一个结构体，维护两个堆，分别叫做val和del</p>
+
+<p>这两个堆的性质需要一样，即要么同时是最小堆要么同时是最大堆</p>
+
+<p>对于插入，直接在val中push值</p>
+
+<p>对于删除，直接在del中push值</p>
+
+<p>对于查询，一直判断val和del的堆顶是否相同，相同的话都pop掉，一直到del为空，然后输出val的堆顶</p>
+
+<h2 id="viii">VIII</h2>
+
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1012">bzoj 1012</a></p>
+
+<blockquote>
+  <p>现在请求你维护一个数列，要求提供以下两种操作</p>
+
+  <ol>
+    <li><strong>Q L</strong> 查询当前数列中末尾$L$个数中的最大的数，并输出这个数的值，保证$L$不超过当前数列的长度</li>
+    <li><strong>A n</strong> 将$n$加上$t$，其中t是最近一次查询操作的答案（如果还未执行过查询操作，则t=0)，并将所得结果对一个固定的常数$D$取模，将所得答案插入到数列的末尾，保证$n$是非负整数并且在长整范围内</li>
+  </ol>
+
+  <p>初始时数列是空的，没有一个数</p>
+
+  <p>$n\le 200000$</p>
+</blockquote>
+
+<p>原题解是单调栈上二分，然而还有另一种乱搞做法</p>
+
+<p>定义$f_{i,j}$表示从$i$开始，往左$2^j$长度的最大值</p>
+
+<p>则有$f_{i,j} = max(f_{i,j-1}, f_{i - (1 « (j - 1)),j - 1})$</p>
+
+<p>边界条件是$f_{i,0} = a_i$</p>
+
+<p>查询的时候直接二进制下往左跳</p>
+
+<p>其实就是ST表</p>
+
+<h2 id="ix">IX</h2>
+
+<blockquote>
+  <p>给你一棵$n$个结点的树, 每一个结点上有一个正整数权值, 其中第$i$个结点上的权值是$v_i$
+维护$2$种操作:</p>
+  <ol>
+    <li><strong>F u v</strong> 输出从$u$到$v$的唯一路径上所有点权值的最大公约数（包括$u$和$v$）</li>
+    <li><strong>C u v d</strong> 将从$u$到$v$的唯一路径上所有点权值加上$d$（包括$u$和$v$）</li>
+  </ol>
+</blockquote>
+
+<h3 id="正常向的做法">正常向的做法</h3>
+
+<p>由于$gcd(a,b,c)=gcd(gcd(a,b),c)$</p>
+
+<p>所以只需要维护链剖之后序列上的<strong>区间</strong>的最大公约数即可</p>
+
+<p>查询和修改都可以拆成区间的查询和修改</p>
+
+<blockquote>
+  <p><strong>更相减损术</strong>
+<script type="math/tex">\tiny \text{gcd}(a,b) = \text{gcd}(a,b-a)</script></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>推论</strong>
+<script type="math/tex">\tiny \text{gcd}(x_1,x_2,x_3, \cdots ,x_n) = \text{gcd}(x_1,x_2-x_1,x_3-x_2, \cdots ,x_n-x_{n-1})</script></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>推论的推论</strong>
+区间加同等于
+<script type="math/tex">\tiny \text{gcd}(x_1+c,x_2+c,x_3+c, \cdots ,x_n+c) = \text{gcd}(x_1+c,x_2-x_1,x_3-x_2,\cdots ,x_n-x_{n-1})</script></p>
+</blockquote>
+
+<p>那么只需要维护差分序列的gcd即可，这样区间加就转化为了单点加</p>
+
+<h3 id="然而还有一种强行维护的鬼畜方法">然而还有一种强行维护的鬼畜方法</h3>
+
+<p>由推论的推论得出，需要维护$\text{g}=\text{gcd}(x_2-x_1,x_3-x_2, \cdots ,x_n-x_{n-1})$</p>
+
+<p>同时维护$d=gcd(x_1,x_2,x_3, \cdots ,x_n)$</p>
+
+<p>这时维护某个区间的信息一共需要记录$(x_1,x_n,g,d)$就可以进行合并</p>
+
+<p>区间加变成了单点加, 打上标记胡乱维护就行了, 要注意$(x_1,x_n)$都需要加上标记</p>
+
+<h2 id="x">X</h2>
+
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=5127">bzoj 5127</a></p>
+
+<blockquote>
+  <p>给定一个序列，每次询问一段区间
+如果这段区间的所有子区间都满足所有的数值值域连续，输出YES，否则输出NO
+一个区间的所有数值值域连续意味着将其排过序后相邻两项的差不超过$1$
+$n \le 10^5$</p>
+</blockquote>
+
+<p>将相邻两项做差（取绝对值），如果查询区间的最大差值不超过$1$，则输出YES，否则输出NO</p>
+
+<p>因为如果有相邻两项差值大于$1$，那么这两项不满足题意，所以是NO</p>
+
+<p>否则，对于任意一个子区间，由于相邻两项差值不超过$1$，所以排序后相邻两项也不超过$1$，所以是YES</p>
+
+<p>特判一下$l=r$的情况</p>
+
+<h2 id="xi">XI</h2>
+
+<p><a href="https://loj.ac/problem/6258">loj 6258</a></p>
+
+<p><a href="https://loj.ac/submission/97541">code</a></p>
+
+<blockquote>
+  <p>SkyDec和YJQQQAQ都是Yazid的好朋友
+他们都非常喜欢吃火锅
+有一天，他们聚在一起，享受一场火锅盛宴
+在这场火锅盛宴中，有一个麻辣浓汤锅底的火锅和$n$种食物，每种食物数量都是无限的
+我们用$1$至$n$将这些食材编号
+每种食物煮熟所需要的时间不同，第$i$种食物煮熟需要$s_i$单位时间
+这表示如果你在第$T$个时刻将一个食物$i$下到火锅里，那么它会在第$T+s_i$个时刻被煮熟，并且此后一直会延续被煮熟的状态，直到它被拿走为止
+Yazid和YJQQQAQ的口味不同：</p>
+
+  <ul>
+    <li>YJQQQAQ觉得所有食物的好吃程度都是相同的</li>
+    <li>Yazid则觉得没有两种食材的好吃程度是相同的，并且，编号越小的食物Yazid越喜欢吃</li>
+  </ul>
+
+  <p>可怜的SkyDec由于不能吃辣，所以只能帮Yazid和YJQQQAQ煮食物
+整个火锅盛宴持续$10^9$单位时间
+在整个盛宴中，三位好朋友除了谈笑风生之外，最重要的事当然就是吃东西了
+在任意整数时刻，都有可能发生下列$4$种事件中的任意一种，我们用$0$至$3$之间的整数$op$描述事件类型：</p>
+
+  <ul>
+    <li><strong>0 id</strong> 表示SkyDec往火锅里下了一个编号为$id$的食物</li>
+    <li><strong>1</strong> Yazid在锅内搜寻熟了的<strong>且</strong>最喜欢吃的食物，并拿走<strong>一个</strong>这种食物；特别地，如果锅里没有熟了的食物，那么Yazid会很愤怒</li>
+    <li><strong>2 id</strong> YJQQQAQ在锅内搜寻编号为$id$的食物：如果锅里不存在该种食物，则YJQQQAQ会很愤怒；如果锅里存在熟了的该食物，则YJQQQAQ会取走<strong>一个</strong>并食用；如果锅里只有未煮熟的该种食物，那么YJQQQAQ会希望知道最接近煮熟的该种食物（即锅内存在时间最长的该种食物）还需要多少时间被煮熟</li>
+    <li><strong>3 l r</strong> 馋涎欲滴的SkyDec想知道，锅里编号在$[l,r]$之间的<strong>且</strong>熟了的食物总共有多少个</li>
+  </ul>
+
+  <p>整个火锅晚宴中共发生了$Q$个事件，且没有任意两个事件在同一时刻发生
+他们的好朋友Flvze想知道这场火锅晚宴中发生的所有事，所以请你告诉她</p>
+</blockquote>
+
+<p>各种STL套起来，还要套个树状数组</p>
+
+<p>暴力维护</p>
+
+<p><del>不知道该怎么形容</del></p>
+
+<h2 id="xii">XII</h2>
+
+<p><a href="https://www.nowcoder.com/acm/contest/105/H">nowcoder 105 H</a></p>
+
+<blockquote>
+  <p>$n$个桶按顺序排列，我们用$1 \sim n$给桶标号
+有两种操作：
+<strong>1 l r c</strong> 区间$[l,r]$中的每个桶中都放入一个颜色为c的球$(1 \le l,r \le n,l \le r,0 \le c \le 60)$
+<strong>2 l r</strong>   查询区间$[l,r]$的桶中有多少种不同颜色的球$(1 \le l,r \le n,l \le r)$
+$n,m \le 100000$</p>
+</blockquote>
+
+<p>看起来是线段树的题</p>
+
+<p>发现$c$的范围比较小，不妨开一个long long压位记录一下当前区间每种颜色是否出现过</p>
+
+<p>之后就是打标记的线段树了</p>
+
+<h2 id="xiii">XIII</h2>
+
+<p><a href="http://oj.magichut.pw/problem/171">eoj 171</a></p>
+
+<p><a href="http://oj.magichut.pw/submission/798">code</a></p>
+
+<blockquote>
+  <p>在平面上以圆周等分排列着$n$个带标号(标号为$1 \sim n$)的点
+你需要计算有多少个三元组$(a,b,c)$,满足$a &lt; b &lt; c$而且标号为$a,b,c$的点在圆上分布的顺序为顺时针顺序
+分布顺序为顺时针的意思是</p>
+
+  <ol>
+    <li>从标号为$a$的点出发，顺时针在圆上遍历一圈</li>
+    <li>标号为$b$的点先遍历到</li>
+    <li>标号为$c$的点后遍历到$(a &lt; b&lt; c)$</li>
+  </ol>
+
+  <p>$3 \le n \le 10^5$</p>
+</blockquote>
+
+<p>看到有环的话，不妨先拆成链并复制一倍</p>
+
+<p>然后枚举$a \in [1,n]$，此时要统计$[a+1,a+n-1]$中的有多少个$(b,c)$满足$b&lt;c$且$x_a &lt; x_b &lt; x_c$</p>
+
+<p>不妨设计一下$[1,n]$向$[2,n+1]$转移的贡献</p>
+
+<p>发现$x_1$被删除后插入到了$x_{n+1}$上，并且对$[2,n+1]$中所有$x_i &lt; x_1$的位置$i$的贡献加上了$1$</p>
+
+<p>发现$x_i$在任意长度为$n$的区间中，都是一个全排列</p>
+
+<p>那么就直接统计每一个权值后有多少个比它大的就好了，这样将$x_1$变为$x_{n+1}$成了一次区间加操作</p>
+
+<p>查询$a$的答案时，就直接查询$1 \sim x_a-1$的权值和就行了（这里的权值和是指维护的<strong>贡献</strong>）</p>
+
+<p>如果权值不是全排列呢？用平衡树维护这个操作！</p>
+
+    </section>
+    <footer class="post-footer">
+      <section class="share">
+        <a class="icon" href="https://twitter.com/intent/tweet?url=http://localhost:4000/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/2018/05/05/datumoj-strukturo-diversaj-demandoj-I&text=datumoj+strukturo+diversaj+demandoj+I&via=iferkey" target="_blank">
+          Share on
+          
+
+        </a>
+      </section>
+    </footer>
+    <div class="bottom-teaser cf">
+      <div class="isLeft">
+        <h5 class="index-headline featured"><span>Written by</span></h5>
+        <section class="author">
+          <div class="author-image"></div>
+          <h4>iferkey</h4>
+          <p class="bio">Ĝi estas en Informaj Olimpikoj</p>
+
+          <p>
+            <span>
+              
+                
+<span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><a href="https://github.com/KingSann"><span class="username">KingSann</span></a>
+
+
+              
+            </span>
+
+            <span>
+              
+                
+<span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><a href="https://twitter.com/iferkey"><span class="username">iferkey</span></a>
+
+
+              
+            </span>
+          </p>
+          <hr>
+          <p class="published">Published <time datetime="2018-05-05 00:00">05 May 2018</time></p>
+        </section>
+      </div>
+      <div class="isRight">
+        <h5 class="index-headline featured"><span>Supported by</span></h5>
+        <footer class="site-footer">
+          <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a> and <a href="https://github.com/ageitgey/amplify">Amplify</a></section>
+          <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+          <div class="inner">
+            <section class="copyright">All content copyright <a href="mailto:ikiHE@qq.com">iferkey</a> &copy; 2018<br>All rights reserved.</section>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </article>
+</main>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+    
+  </body>
+</html>

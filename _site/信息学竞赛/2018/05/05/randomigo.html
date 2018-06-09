@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Lora:400,700' rel='stylesheet' type='text/css'>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>randomigo</title>
+  <meta name="description" content="前言">
+
+  <link rel="canonical" href="http://localhost:4000/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/2018/05/05/randomigo.html">
+  <link rel="alternate" type="application/rss+xml" title="magia kabano" href="http://localhost:4000/feed.xml">
+
+  <script type="application/ld+json">
+  
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": "http://localhost:4000/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/2018/05/05/randomigo.html",
+  "headline": "randomigo",
+  "datePublished": "2018-05-05T00:00:00+08:00",
+  "dateModified": "2018-05-05T00:00:00+08:00",
+  "description": "前言",
+  "author": {
+    "@type": "Person",
+    "name": "iferkey"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "magia kabano",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:4000/assets/images/logo.jpg",
+      "width": "60",
+      "height": "60"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://localhost:4000/assets/images/logo.jpg",
+    "height": "60",
+    "width": "60"
+  }
+}
+
+  </script>
+
+  <style amp-custom>
+  
+  /**
+ * Syntax highlighting styles
+ */
+.highlight {
+  background: #fff; }
+  .highlighter-rouge .highlight {
+    background: #eef; }
+  .highlight .c {
+    color: #998;
+    font-style: italic; }
+  .highlight .err {
+    color: #a61717;
+    background-color: #e3d2d2; }
+  .highlight .k {
+    font-weight: bold; }
+  .highlight .o {
+    font-weight: bold; }
+  .highlight .cm {
+    color: #998;
+    font-style: italic; }
+  .highlight .cp {
+    color: #999;
+    font-weight: bold; }
+  .highlight .c1 {
+    color: #998;
+    font-style: italic; }
+  .highlight .cs {
+    color: #999;
+    font-weight: bold;
+    font-style: italic; }
+  .highlight .gd {
+    color: #000;
+    background-color: #fdd; }
+  .highlight .gd .x {
+    color: #000;
+    background-color: #faa; }
+  .highlight .ge {
+    font-style: italic; }
+  .highlight .gr {
+    color: #a00; }
+  .highlight .gh {
+    color: #999; }
+  .highlight .gi {
+    color: #000;
+    background-color: #dfd; }
+  .highlight .gi .x {
+    color: #000;
+    background-color: #afa; }
+  .highlight .go {
+    color: #888; }
+  .highlight .gp {
+    color: #555; }
+  .highlight .gs {
+    font-weight: bold; }
+  .highlight .gu {
+    color: #aaa; }
+  .highlight .gt {
+    color: #a00; }
+  .highlight .kc {
+    font-weight: bold; }
+  .highlight .kd {
+    font-weight: bold; }
+  .highlight .kp {
+    font-weight: bold; }
+  .highlight .kr {
+    font-weight: bold; }
+  .highlight .kt {
+    color: #458;
+    font-weight: bold; }
+  .highlight .m {
+    color: #099; }
+  .highlight .s {
+    color: #d14; }
+  .highlight .na {
+    color: #008080; }
+  .highlight .nb {
+    color: #0086B3; }
+  .highlight .nc {
+    color: #458;
+    font-weight: bold; }
+  .highlight .no {
+    color: #008080; }
+  .highlight .ni {
+    color: #800080; }
+  .highlight .ne {
+    color: #900;
+    font-weight: bold; }
+  .highlight .nf {
+    color: #900;
+    font-weight: bold; }
+  .highlight .nn {
+    color: #555; }
+  .highlight .nt {
+    color: #000080; }
+  .highlight .nv {
+    color: #008080; }
+  .highlight .ow {
+    font-weight: bold; }
+  .highlight .w {
+    color: #bbb; }
+  .highlight .mf {
+    color: #099; }
+  .highlight .mh {
+    color: #099; }
+  .highlight .mi {
+    color: #099; }
+  .highlight .mo {
+    color: #099; }
+  .highlight .sb {
+    color: #d14; }
+  .highlight .sc {
+    color: #d14; }
+  .highlight .sd {
+    color: #d14; }
+  .highlight .s2 {
+    color: #d14; }
+  .highlight .se {
+    color: #d14; }
+  .highlight .sh {
+    color: #d14; }
+  .highlight .si {
+    color: #d14; }
+  .highlight .sx {
+    color: #d14; }
+  .highlight .sr {
+    color: #009926; }
+  .highlight .s1 {
+    color: #d14; }
+  .highlight .ss {
+    color: #990073; }
+  .highlight .bp {
+    color: #999; }
+  .highlight .vc {
+    color: #008080; }
+  .highlight .vg {
+    color: #008080; }
+  .highlight .vi {
+    color: #008080; }
+  .highlight .il {
+    color: #099; }
+
+.icon > svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle; }
+  .icon > svg path {
+    fill: #828282; }
+
+amp-img {
+  background-color: grey; }
+
+.cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+main {
+  display: block; }
+
+body {
+  background-color: #fff;
+  font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig"; }
+
+.site-header {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 16px auto 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 800px) {
+    .site-header {
+      padding: 0 16px; } }
+  .site-header .page-links {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 30px; }
+    .site-header .page-links a {
+      text-decoration: none;
+      color: #999999; }
+      .site-header .page-links a:hover {
+        color: #333333; }
+
+.blog-header {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .blog-header .blog-title {
+    margin-bottom: 8px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    outline: 0;
+    line-height: 50px;
+    word-break: break-word;
+    color: #333333; }
+  .blog-header .blog-description {
+    font-size: 28px;
+    margin: 0 0 20px;
+    padding: 0;
+    line-height: 1.2;
+    color: #666666;
+    font-weight: 300; }
+
+.content {
+  width: 100%;
+  max-width: 700px;
+  margin: 25px auto 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 800px) {
+    .content {
+      padding: 0 16px; } }
+  .content article {
+    padding: 20px 0;
+    border-bottom: 1px solid #f2f2f0; }
+    .content article:last-child {
+      border-bottom: 0px; }
+    .content article .post-title {
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      font-style: normal;
+      display: block;
+      font-size: 36px;
+      line-height: 1.15;
+      margin: 0 0; }
+      .content article .post-title a {
+        text-decoration: none;
+        color: #333332; }
+        .content article .post-title a:hover {
+          text-decoration: none; }
+    .content article .post-excerpt {
+      letter-spacing: -0.02em;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1.59;
+      color: #666665; }
+    .content article .post-meta {
+      font-size: 14px;
+      color: #b3b3b1;
+      line-height: 30px; }
+      .content article .post-meta a {
+        color: #b3b3b1;
+        text-decoration: none; }
+        .content article .post-meta a:hover {
+          text-decoration: underline; }
+
+.post-template .content {
+  max-width: 700px; }
+
+.index-headline {
+  border-top: 1px solid #dededc;
+  margin: 0;
+  padding: 16px 0; }
+  .index-headline span {
+    color: #b3b3b1;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+.pagination {
+  text-align: center;
+  padding: 16px 0 0;
+  font-size: 12px; }
+  .pagination a {
+    color: #999999;
+    text-decoration: none; }
+    .pagination a:hover {
+      color: #333333; }
+
+.site-footer {
+  margin: 0 auto;
+  padding: 48px 0;
+  width: 100%;
+  max-width: 700px;
+  font-size: 12px;
+  text-align: center;
+  color: #999999;
+  line-height: 17.6px; }
+  .site-footer a {
+    color: #666666;
+    text-decoration: none; }
+    .site-footer a:hover {
+      color: #333333; }
+
+.post .post-meta {
+  font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif; }
+.post .post-title {
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.04em;
+  font-size: 50px;
+  line-height: 1.1;
+  color: #333332;
+  margin-bottom: 50px; }
+.post .author-image {
+  background-image: url(/assets/images/author.jpg);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 8px;
+  margin-bottom: -10px;
+  float: left;
+  background-size: cover;
+  border-radius: 100%;
+  text-indent: -9999px; }
+.post .post-meta-text {
+  color: #b3b3b1;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  overflow: hidden;
+  font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+.post .post-content {
+  width: 100%;
+  font-family: Georgia, Cambria, "Times New Roman", Times, "Lora", serif;
+  color: #333333; }
+  .post .post-content h1, .post .post-content h2, .post .post-content h3 {
+    font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif; }
+  .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1.3;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif; }
+  .post .post-content h3 {
+    font-size: 36px; }
+  .post .post-content h2, .post .post-content h1 {
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-top: 50px;
+    margin-bottom: 0px; }
+  .post .post-content table {
+    border-collapse: collapse; }
+  .post .post-content table, .post .post-content th, .post .post-content td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left; }
+  .post .post-content p {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 1.59;
+    letter-spacing: -.002em;
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: #333333;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto; }
+  .post .post-content a {
+    color: #333333;
+    text-decoration: underline; }
+  .post .post-content amp-img, .post .post-content amp-youtube {
+    margin-top: 30px; }
+  .post .post-content figure {
+    margin: 0;
+    padding: 0 0 30px; }
+  .post .post-content figcaption {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #666665;
+    outline: 0;
+    z-index: 300;
+    text-align: center; }
+  .post .post-content hr {
+    border: 0;
+    padding: 0;
+    display: block;
+    width: 15%;
+    margin: 30px auto;
+    border: 0px solid #dddddd;
+    border-top: 1px solid #dddddd; }
+  .post .post-content blockquote {
+    margin: 0 0 30px;
+    margin-left: -26px;
+    border-left: 3px solid #57ad68;
+    padding-left: 20px; }
+    .post .post-content blockquote p {
+      letter-spacing: 0.01rem;
+      font-weight: 400;
+      mborder-left: 3px solid #57ad68;
+      mpadding-left: 20px;
+      mmargin-left: -26px;
+      padding-bottom: 3px; }
+  .post .post-content ul, .post .post-content ol {
+    padding: 0 0 30px;
+    margin: 0; }
+  .post .post-content li {
+    padding: 0;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    line-height: 30px;
+    margin-left: 30px;
+    margin-bottom: 12px;
+    padding-top: 2px; }
+    .post .post-content li p {
+      padding: 0 0 1.618rem; }
+  .post .post-content ol li {
+    list-style-type: decimal; }
+.post .bottom-teaser {
+  padding: 50px 0 0 0;
+  font-family: "Helvetica Neue", "Open Sans", Arial, Helvetica, sans-serif; }
+  .post .bottom-teaser hr {
+    border: 0;
+    padding: 0;
+    display: block;
+    width: 15%;
+    margin: 16px 0 16px 100px;
+    border: 0px solid #dddddd;
+    border-top: 1px solid #dddddd; }
+  .post .bottom-teaser .isLeft {
+    float: left;
+    width: 47%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media only screen and (max-width: 800px) {
+      .post .bottom-teaser .isLeft {
+        width: 100%;
+        padding-bottom: 32px; } }
+    .post .bottom-teaser .isLeft .bio {
+      margin-top: 18px;
+      margin-bottom: 18px; }
+    .post .bottom-teaser .isLeft .username {
+      margin-left: 4px;
+      margin-right: 18px;
+      margin-bottom: 18px; }
+    .post .bottom-teaser .isLeft .index-headline {
+      padding-bottom: 32px; }
+    .post .bottom-teaser .isLeft a {
+      color: black;
+      text-decoration: none; }
+      .post .bottom-teaser .isLeft a:hover {
+        color: #333333;
+        text-decoration: underline; }
+    .post .bottom-teaser .isLeft .author-image {
+      display: block;
+      width: 80px;
+      height: 80px;
+      float: left;
+      background-size: cover;
+      border-radius: 100%;
+      text-indent: -9999px; }
+    .post .bottom-teaser .isLeft h4 {
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 700;
+      padding: 0;
+      margin: 0;
+      padding-left: 100px; }
+    .post .bottom-teaser .isLeft p {
+      font-size: 14px;
+      line-height: 1.3;
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+      padding-left: 100px; }
+      .post .bottom-teaser .isLeft p.published {
+        color: #999999; }
+  .post .bottom-teaser .isRight {
+    float: right;
+    width: 47%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media only screen and (max-width: 800px) {
+      .post .bottom-teaser .isRight {
+        width: 100%; } }
+    .post .bottom-teaser .isRight .index-headline {
+      padding-bottom: 32px; }
+    .post .bottom-teaser .isRight .site-footer {
+      margin: 0;
+      padding: 0;
+      color: #333333;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.3;
+      color: #999999; }
+      .post .bottom-teaser .isRight .site-footer a {
+        color: #333333;
+        text-decoration: none; }
+        .post .bottom-teaser .isRight .site-footer a:hover {
+          text-decoration: underline; }
+      .post .bottom-teaser .isRight .site-footer .poweredby {
+        display: block;
+        padding-bottom: 18px;
+        font-weight: 700;
+        color: #333333; }
+
+.share {
+  text-align: right;
+  padding: 20px 0 0; }
+  .share a {
+    text-decoration: none;
+    color: #bbbbbb;
+    padding-left: 12px; }
+    .share a .hidden {
+      display: none; }
+    .share a:hover {
+      color: #333333; }
+
+pre, code {
+  font-size: 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #eeeeff; }
+
+code {
+  padding: 1px 5px; }
+
+pre {
+  padding: 8px 12px;
+  overflow-x: scroll; }
+  pre > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0; }
+
+.pagination .disabled {
+  opacity: 0; }
+
+
+  </style>
+
+
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+</head>
+
+  <body>
+    <header class="site-header">
+  <a href="/" class="logo"><span class="logo"><amp-img src="/assets/images/logo.jpg" width="48" height="48" /></span></a>
+
+  <div class="page-links">
+    <a class="page-link" href="/">Home</a>
+    
+      
+      • <a class="page-link" href="/about/">About</a>
+      
+    
+      
+    
+      
+    
+      
+      • <a class="page-link" href="/links.html">Link</a>
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</header>
+
+
+    <main class="content" role="main">
+  <article class="post">
+    <div class="post-meta">
+      <h1 class="post-title">randomigo</h1>
+    </div>
+
+    <section class="post-content">
+      <a name="topofpage"></a>
+      <h1 id="前言">前言</h1>
+
+<p>在OI中，某些题是要求找一种方案，最大化或最小化某个值，此时可以选择动态规划、网络流、数学公式、线性规划、剪枝搜索、数据结构维护、二分三分等等，但如果想不出正确的方法的话，可以尝试随机化乱搞来大致骗分</p>
+
+<h1 id="随机爬山">随机爬山</h1>
+
+<p>随机爬山是一种较为容易的随机化方法，流程十分简单</p>
+
+<ol>
+  <li>随机一种初始状态</li>
+  <li>计算当前解</li>
+  <li>略微更改一下当前局面</li>
+  <li>如果当前局面比修改之前的局面更优，则将当前局面更新为全局局面</li>
+  <li>否则，忽略当前局面，回滚为之前局面</li>
+  <li>回到第三步</li>
+</ol>
+
+<p>将这种操作多做几遍，将答案取最优值就好</p>
+
+<p>当然这种方法写起来还是比较麻烦，下面给出一种简化版的随机爬山（准确的说已经不是随机爬山了，不再有<strong>爬山</strong>这个操作）</p>
+
+<ol>
+  <li>随机一种初始状态</li>
+  <li>计算当前解</li>
+  <li>回到第一步</li>
+</ol>
+
+<p>将这种操作多做几遍，将答案取最优值就好，当然这种方法得到的答案可能会很差，仅限于时间不够的情况下去实现</p>
+
+<h1 id="模拟退火">模拟退火</h1>
+
+<p>随机爬山算法有一个缺陷，就是有可能会陷入当前局部最优解而忽略掉了全局最优解，模拟退火算法是允许一定概率的保留当前的局部非最优解，而使得可以去向全局最优解逐渐靠近，随着<strong>温度</strong>的降低，这个概率越来越低，最终退化为爬山算法</p>
+
+<p>同随机爬山算法一样，模拟退火算法也需要多次执行取最优解，代码流程大致为</p>
+
+<ol>
+  <li>初始化温度</li>
+  <li>产生一个新状态，并计算解</li>
+  <li>如果新状态比当且解更优，或者有一定概率的产生，将新状态作为当前状态</li>
+  <li>降温</li>
+  <li>回到第二步</li>
+</ol>
+
+<p>算法描述为（为了简单起见，一般不用物理学中的模拟退火公式实现）</p>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="n">type</span> <span class="nf">hot</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">double</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">;</span> <span class="c1">// 初始化温度
+</span>    <span class="n">State</span> <span class="n">nowState</span> <span class="o">=</span> <span class="n">initState</span><span class="p">();</span> <span class="c1">// 初始化状态
+</span>    <span class="n">type</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">nowState</span><span class="p">);</span> <span class="c1">// 返回最优解
+</span>    <span class="k">while</span><span class="p">(</span><span class="n">T</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 达到常温
+</span>        <span class="n">State</span> <span class="n">nextState</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">nowState</span><span class="p">);</span> <span class="c1">// 产生新状态
+</span>        <span class="k">if</span><span class="p">(</span><span class="n">getvalue</span><span class="p">(</span><span class="n">nextState</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">nowState</span><span class="p">)</span> <span class="c1">// 如果解更有就保留
+</span>           <span class="o">||</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">100000</span> <span class="o">&lt;</span> <span class="n">T</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 一定概率更新，但随着温度升高而概率减小
+</span>            <span class="n">nowState</span> <span class="o">=</span> <span class="n">nextState</span><span class="p">;</span> <span class="c1">// 更新状态
+</span>            <span class="n">ret</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">nowState</span><span class="p">));</span> <span class="c1">// 更新返回值
+</span>        <span class="p">}</span>
+        <span class="n">T</span> <span class="o">*=</span> <span class="mf">0.85</span><span class="p">;</span> <span class="c1">// 降温（退火）
+</span>    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">type</span> <span class="nf">sol</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">type</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">initState</span><span class="p">();</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">1000</span> <span class="p">;</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="n">hot</span><span class="p">());</span> <span class="c1">// 多次模拟退火，提高准确率
+</span>    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h2 id="产生新状态">产生新状态</h2>
+
+<p>一般来说，产生新状态要求从原先的状态改变之后，修改的地方比较小，定义其为邻域</p>
+
+<p>比如说</p>
+
+<h3 id="图上选点集问题">图上选点集问题</h3>
+
+<p>邻域为某个点的选或不选</p>
+
+<h3 id="将某个序列重新排列后最优化某函数问题">将某个序列重新排列后最优化某函数问题</h3>
+
+<p>邻域为选择两个位置进行互换</p>
+
+<h1 id="例题">例题</h1>
+
+<h2 id="北邮2018f火焰炼金术">北邮2018:F火焰炼金术</h2>
+
+<blockquote>
+  <p>给你一张无向图，我们称一个火字，指的是对于$a,b,c,d$四个点，其中$a$与其它三个点相连的这样的四个点，两个火字不同当且仅当组成的部分有一个点不同、或者是中间那个点不同。要求你找一个点的子集，使得这些点组成的火字的个数除以该点集的大小最大</p>
+</blockquote>
+
+<p>直接模拟退火，邻域为改变某个点是否选入点集</p>
+
+<h2 id="续一秒">续一秒</h2>
+
+<blockquote>
+  <p>给定数列$a_i$,将其重新排列之后最大化$ | | | a_1 - a_2 | -a_3 | \cdots -a_n | $</p>
+</blockquote>
+
+<p>模拟退火，邻域为交换某两个位置上的值</p>
+
+    </section>
+    <footer class="post-footer">
+      <section class="share">
+        <a class="icon" href="https://twitter.com/intent/tweet?url=http://localhost:4000/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/2018/05/05/randomigo&text=randomigo&via=iferkey" target="_blank">
+          Share on
+          
+
+        </a>
+      </section>
+    </footer>
+    <div class="bottom-teaser cf">
+      <div class="isLeft">
+        <h5 class="index-headline featured"><span>Written by</span></h5>
+        <section class="author">
+          <div class="author-image"></div>
+          <h4>iferkey</h4>
+          <p class="bio">Ĝi estas en Informaj Olimpikoj</p>
+
+          <p>
+            <span>
+              
+                
+<span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><a href="https://github.com/KingSann"><span class="username">KingSann</span></a>
+
+
+              
+            </span>
+
+            <span>
+              
+                
+<span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><a href="https://twitter.com/iferkey"><span class="username">iferkey</span></a>
+
+
+              
+            </span>
+          </p>
+          <hr>
+          <p class="published">Published <time datetime="2018-05-05 00:00">05 May 2018</time></p>
+        </section>
+      </div>
+      <div class="isRight">
+        <h5 class="index-headline featured"><span>Supported by</span></h5>
+        <footer class="site-footer">
+          <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a> and <a href="https://github.com/ageitgey/amplify">Amplify</a></section>
+          <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+          <div class="inner">
+            <section class="copyright">All content copyright <a href="mailto:ikiHE@qq.com">iferkey</a> &copy; 2018<br>All rights reserved.</section>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </article>
+</main>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+    
+  </body>
+</html>
