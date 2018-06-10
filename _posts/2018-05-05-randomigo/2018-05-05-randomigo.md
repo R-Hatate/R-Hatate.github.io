@@ -1,6 +1,6 @@
 ---
 layout: post
-title: randomigo
+title: 随机化算法与模拟退火
 category: 信息学竞赛
 tags: [随机化, 模拟退火]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: datumoj strukturo diversaj demandoj I
+title: 数据结构杂题——第一期
 category: 信息学竞赛
 tags: [数据结构]
 ---

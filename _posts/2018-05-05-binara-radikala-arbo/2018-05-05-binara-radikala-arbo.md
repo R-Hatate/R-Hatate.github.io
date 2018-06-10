@@ -1,6 +1,6 @@
 ---
 layout: post
-title: binara radikala arbo
+title: 01trie
 category: 信息学竞赛
 tags: [trie, 平衡树]
 ---

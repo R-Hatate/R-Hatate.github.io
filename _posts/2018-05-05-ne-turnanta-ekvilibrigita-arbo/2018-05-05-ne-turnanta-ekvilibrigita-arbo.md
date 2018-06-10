@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ne-turnanta ekvilibrigita arbo
+title: 非旋转平衡树
 category: 信息学竞赛
 tags: [非旋转平衡树, 平衡树]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: strangaj lertaĵoj
+title: 奇技淫巧
 category: 信息学竞赛
 tags:
   - 奇技淫巧

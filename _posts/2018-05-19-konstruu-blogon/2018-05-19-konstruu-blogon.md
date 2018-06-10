@@ -1,6 +1,6 @@
 ---
 layout: post
-title: konstruu blogon
+title: 博客搭建教程
 category: 信息学竞赛
 tags: [如何搭建XXX, 博客]
 ---

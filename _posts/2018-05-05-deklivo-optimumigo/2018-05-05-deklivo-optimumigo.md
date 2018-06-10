@@ -1,6 +1,6 @@
 ---
 layout: post
-title: deklivo optimumigo
+title: 斜率优化
 category: 信息学竞赛
 tags: [斜率优化]
 ---

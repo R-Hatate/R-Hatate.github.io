@@ -1,6 +1,6 @@
 ---
 layout: post
-title: binara grupado
+title: 二进制分组
 category: 信息学竞赛
 tags: [二进制分组, 凸包, 平衡树, 分块, 定期重构]
 ---

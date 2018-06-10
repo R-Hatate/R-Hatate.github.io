@@ -1,6 +1,6 @@
 ---
 layout: post
-title: apudaj kaj parciales
+title: 差分与前缀和
 category: 信息学竞赛
 tags: [差分, 前缀和]
 ---

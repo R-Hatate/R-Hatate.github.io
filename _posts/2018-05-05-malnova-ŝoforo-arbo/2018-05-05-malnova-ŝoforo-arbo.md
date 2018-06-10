@@ -1,6 +1,6 @@
 ---
 layout: post
-title: malnova ŝoforo arbo
+title: ODT
 category: 信息学竞赛
 tags: [ODT, 平衡树]
 ---

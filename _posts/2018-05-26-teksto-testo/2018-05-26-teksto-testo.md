@@ -1,6 +1,8 @@
 ---
 layout: post
 title: teksto testo
+category: 测试
+tags: [测试, 博客]
 ---
 
 # teksto testo

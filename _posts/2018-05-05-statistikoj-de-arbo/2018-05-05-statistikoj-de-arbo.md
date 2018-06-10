@@ -1,6 +1,6 @@
 ---
 layout: post
-title: statistikoj de arbo
+title: 树上统计
 category: 信息学竞赛
 tags: [差分, 前缀和, 树分块, 启发式合并, dsu on tree]
 ---

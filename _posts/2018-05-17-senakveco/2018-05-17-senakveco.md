@@ -1,6 +1,6 @@
 ---
 layout: post
-title: senakveco demandoj
+title: 不等式杂题
 category: 数学
 tags: [数学, 不等式]
 ---
