@@ -2,9 +2,10 @@
 layout: post
 title: strangaj lertaĵoj
 category: 信息学竞赛
-tags: [奇技淫巧]
+tags:
+  - 奇技淫巧
+published: true
 ---
-
 # 各种lca的奇技淫巧
 
 ## 两个点的lca
