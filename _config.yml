@@ -12,13 +12,13 @@ email: rys10001225@126.com  # 你的邮箱
 description: 
 logo: "/assets/images/logo.jpg"    #自定义 logo
 # baseurl: "/" # 重要：如果你绑定了自定义域名或使用了自己的用户名作为项目名，请删除本行并修改下一行
-url: "https://code.magichut.pw" # 如果你绑定了自定义域名或使用了自己的用户名作为项目名，请修改本行为你的域名
+url: "https://r-hatate.github.io" # 如果你绑定了自定义域名或使用了自己的用户名作为项目名，请修改本行为你的域名
 paginate: 5 # 每页显示文章数量
 name: 'meepo'   # 你的昵称
 bio: Ĝi estas en Informaj Olimpikoj
 author_image: "/assets/images/author.jpg"  #个人头像
-twitter_username: iferkey
-github_username: KingSann
+twitter_username: meepo
+github_username: meepo
 
 # Build settings
 markdown: kramdown
